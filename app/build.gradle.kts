@@ -1,17 +1,13 @@
-plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+ plugins {
+    alias(libs.plugins.taskr.android.application)
+    alias(libs.plugins.taskr.android.application.compose)
 }
 
 android {
     namespace = "dev.spozap.taskr"
-    compileSdk = 34
 
     defaultConfig {
         applicationId = "dev.spozap.taskr"
-        minSdk = 24
-        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
