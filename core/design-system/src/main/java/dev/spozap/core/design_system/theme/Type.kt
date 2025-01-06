@@ -1,4 +1,5 @@
-package dev.spozap.taskr.ui.theme
+package dev.spozap.core.design_system.theme
+
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
