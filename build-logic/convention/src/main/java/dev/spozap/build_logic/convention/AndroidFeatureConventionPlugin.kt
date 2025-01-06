@@ -1,6 +1,5 @@
 package dev.spozap.build_logic.convention
 
-import com.android.build.gradle.LibraryExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
@@ -14,6 +13,9 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
 
             dependencies {
                 "implementation"(project(":core:design-system"))
+
+                "implementation"(libs.findLibrary("androidx.navigation.compose").get())
+                "implementation"(libs.findLibrary("kotlinx.serialization.json").get())
             }
 
         }
