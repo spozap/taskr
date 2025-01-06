@@ -47,3 +47,4 @@ taskr-android-application = { id = "dev.spozap.application", version = "unspecif
 taskr-android-application-compose = { id = "dev.spozap.application.compose", version = "unspecified" }
 taskr-android-library = { id = "dev.spozap.library", version = "unspecified" }
 taskr-android-library-compose = { id = "dev.spozap.library.compose", version = "unspecified" }
+taskr-feature = { id = "dev.spozap.feature", version = "unspecified" }

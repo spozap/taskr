@@ -26,3 +26,4 @@ rootProject.name = "taskr"
 
 include(":app")
 include(":core:design-system")
+include(":feature:home")
