@@ -9,6 +9,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
         with(target) {
             with(pluginManager) {
                 apply("dev.spozap.library")
+                apply("dev.spozap.hilt")
             }
 
             dependencies {

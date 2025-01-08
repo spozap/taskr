@@ -21,6 +21,7 @@ dependencies {
     compileOnly(libs.android.gradle.plugin)
     compileOnly(libs.kotlin.gradle.plugin)
     compileOnly(libs.compose.gradle.plugin)
+    compileOnly(libs.ksp.gradle.plugin)
 }
 
 tasks {
@@ -51,6 +52,10 @@ gradlePlugin {
         register("androidFeature") {
             id = "dev.spozap.feature"
             implementationClass = "dev.spozap.build_logic.convention.AndroidFeatureConventionPlugin"
+        }
+        register("hilt") {
+            id = "dev.spozap.hilt"
+            implementationClass = "dev.spozap.build_logic.convention.HiltConventionPlugin"
         }
     }
 }

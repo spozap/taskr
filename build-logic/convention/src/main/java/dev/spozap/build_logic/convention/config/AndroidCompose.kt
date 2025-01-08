@@ -40,8 +40,8 @@ internal fun Project.configureAndroidCompose(
                 .relativeToRootProject("compose-reports")
                 .let(reportsDestination::set)
 
-            stabilityConfigurationFile.set(isolated.rootProject.projectDirectory.file("compose_compiler_config.conf"))
-
+            stabilityConfigurationFiles
+                .add(isolated.rootProject.projectDirectory.file("compose_compiler_config.conf"))
         }
     }
 }
