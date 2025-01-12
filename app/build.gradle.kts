@@ -1,6 +1,7 @@
  plugins {
     alias(libs.plugins.taskr.android.application)
     alias(libs.plugins.taskr.android.application.compose)
+    alias(libs.plugins.taskr.hilt)
 }
 
 android {
