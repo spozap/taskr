@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import dagger.hilt.android.AndroidEntryPoint
 import dev.spozap.core.design_system.theme.TaskrTheme
 import dev.spozap.feature.home.HomeScreen
+import dev.spozap.taskr.ui.TaskrApp
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -20,11 +21,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TaskrTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Surface(modifier = Modifier.padding(innerPadding)) {
-                        HomeScreen()
-                    }
-                }
+                TaskrApp()
             }
         }
     }
