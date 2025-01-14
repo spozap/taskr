@@ -1,6 +1,7 @@
 package dev.spozap.feature.home.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,6 +23,11 @@ internal fun RowScope.TaskStatsItemContainer(content: @Composable () -> Unit) {
                 color = MaterialTheme.colorScheme.background,
                 shape = RoundedCornerShape(16.dp)
             )
+            .border(
+                width = 4.dp,
+                color = MaterialTheme.colorScheme.primary,
+                shape = RoundedCornerShape(12.dp)
+            )
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
@@ -37,7 +43,7 @@ internal fun TaskStatsItemContent(
 ) {
     Box(
         Modifier
-            .background(MaterialTheme.colorScheme.surface, RoundedCornerShape(100))
+            .background(MaterialTheme.colorScheme.primary, RoundedCornerShape(100))
             .padding(8.dp)
     ) {
         icon()
