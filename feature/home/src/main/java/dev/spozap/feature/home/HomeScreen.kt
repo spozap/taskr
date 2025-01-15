@@ -22,7 +22,7 @@ import dev.spozap.feature.home.components.TaskStatsItemContent
 import dev.spozap.taskr.feature.home.R
 
 @Composable
-fun HomeRoute(
+internal fun HomeRoute(
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     HomeScreen()
@@ -33,7 +33,8 @@ private fun HomeScreen() {
     Column(
         Modifier
             .fillMaxSize()
-            .padding(8.dp)) {
+            .padding(8.dp)
+    ) {
         Text("You have 6 tasks to complete")
         Row(
             modifier = Modifier.fillMaxWidth(),
