@@ -6,9 +6,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -32,53 +30,58 @@ fun HomeRoute(
 
 @Composable
 private fun HomeScreen() {
-    Text("You have 6 tasks to complete")
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        TaskStatsItemContainer {
-            TaskStatsItemContent(
-                title = "Tasks today",
-                icon = {
-                    Icon(
-                        painter = painterResource(R.drawable.task_icon),
-                        tint = Color.White,
-                        contentDescription = "Task icon"
-                    )
-                },
-                footer = {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(4.dp)
-                    ) {
-                        Text("8", fontSize = 32.sp, fontWeight = FontWeight.Bold)
-                        Text("Tasks")
+    Column(
+        Modifier
+            .fillMaxSize()
+            .padding(8.dp)) {
+        Text("You have 6 tasks to complete")
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            TaskStatsItemContainer {
+                TaskStatsItemContent(
+                    title = "Tasks today",
+                    icon = {
+                        Icon(
+                            painter = painterResource(R.drawable.task_icon),
+                            tint = Color.White,
+                            contentDescription = "Task icon"
+                        )
+                    },
+                    footer = {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(4.dp)
+                        ) {
+                            Text("8", fontSize = 32.sp, fontWeight = FontWeight.Bold)
+                            Text("Tasks")
+                        }
                     }
-                }
-            )
+                )
 
-        }
-        TaskStatsItemContainer {
-            TaskStatsItemContent(
-                title = "In progress",
-                icon = {
-                    Icon(
-                        painter = painterResource(R.drawable.todo_icon),
-                        tint = Color.White,
-                        contentDescription = "Todo tasks icon"
-                    )
-                },
-                footer = {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(4.dp)
-                    ) {
-                        Text("4", fontSize = 32.sp, fontWeight = FontWeight.Bold)
-                        Text("Tasks")
+            }
+            TaskStatsItemContainer {
+                TaskStatsItemContent(
+                    title = "In progress",
+                    icon = {
+                        Icon(
+                            painter = painterResource(R.drawable.todo_icon),
+                            tint = Color.White,
+                            contentDescription = "Todo tasks icon"
+                        )
+                    },
+                    footer = {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(4.dp)
+                        ) {
+                            Text("4", fontSize = 32.sp, fontWeight = FontWeight.Bold)
+                            Text("Tasks")
+                        }
                     }
-                }
-            )
+                )
+            }
         }
     }
 }
