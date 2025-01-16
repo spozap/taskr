@@ -12,17 +12,18 @@ import dev.spozap.taskr.components.TaskrBottomNavigationBar
 import dev.spozap.taskr.navigation.TaskrNavHost
 
 @Composable
-internal fun TaskrApp() {
+internal fun TaskrApp(appState: TaskrAppState) {
+
     TaskrBackground {
         Scaffold(
             containerColor = Color.Transparent,
-            bottomBar = { TaskrBottomNavigationBar() }) { padding ->
+            bottomBar = { TaskrBottomNavigationBar(appState) }) { padding ->
             Column(
                 Modifier
                     .fillMaxSize()
                     .padding(padding)
             ) {
-                TaskrNavHost()
+                TaskrNavHost(appState.navController)
             }
         }
     }

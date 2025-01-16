@@ -40,6 +40,7 @@ dependencies {
 
     implementation(projects.core.designSystem)
     implementation(projects.feature.home)
+    implementation(projects.feature.addTask)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

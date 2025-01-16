@@ -4,13 +4,13 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.runtime.Composable
-import dev.spozap.taskr.navigation.TopLevelDestination
+import dev.spozap.taskr.ui.TaskrAppState
 
 
 @Composable
-internal fun TaskrBottomNavigationBar() {
+internal fun TaskrBottomNavigationBar(appState: TaskrAppState) {
     NavigationBar {
-        TopLevelDestination.entries.forEach { destination ->
+        appState.topLevelDestinations.forEach { destination ->
             NavigationBarItem(
                 selected = false,
                 icon = {
@@ -19,7 +19,7 @@ internal fun TaskrBottomNavigationBar() {
                         contentDescription = destination.title
                     )
                 },
-                onClick = {}
+                onClick = { appState.navigateToTopLevelDestination(destination) }
             )
         }
     }
