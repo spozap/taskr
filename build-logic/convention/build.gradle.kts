@@ -22,6 +22,7 @@ dependencies {
     compileOnly(libs.kotlin.gradle.plugin)
     compileOnly(libs.compose.gradle.plugin)
     compileOnly(libs.ksp.gradle.plugin)
+    compileOnly(libs.room.gradle.plugin)
 }
 
 tasks {
@@ -63,6 +64,10 @@ gradlePlugin {
         register("kotlinJvm") {
             id = "dev.spozap.kotlin.jvm"
             implementationClass = "dev.spozap.build_logic.convention.JvmLibraryConventionPlugin"
+        }
+        register("androidRoom") {
+            id = "dev.spozap.room"
+            implementationClass = "dev.spozap.build_logic.convention.AndroidRoomConventionPlugin"
         }
     }
 }

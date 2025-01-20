@@ -17,6 +17,7 @@ ksp = "2.1.0-1.0.29"
 hilt = "2.54"
 hiltNavigationCompose = "1.2.0"
 jetbrainsKotlinJvm = "1.9.24"
+room = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -44,12 +45,18 @@ kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 
+# Room
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+
 #Dependencies for build-logic
 
 android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 compose-gradle-plugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
 ksp-gradle-plugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+room-gradle-plugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -59,12 +66,14 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinSerialization" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+room = { id = "androidx.room", version.ref = "room" }
 
 # Plugins defined by this project
 taskr-android-application = { id = "dev.spozap.application", version = "unspecified" }
 taskr-android-application-compose = { id = "dev.spozap.application.compose", version = "unspecified" }
 taskr-android-library = { id = "dev.spozap.library", version = "unspecified" }
 taskr-android-library-compose = { id = "dev.spozap.library.compose", version = "unspecified" }
+taskr-android-room = { id = "dev.spozap.room", version = "unspecified" }
 taskr-feature = { id = "dev.spozap.feature", version = "unspecified" }
 taskr-hilt = { id = "dev.spozap.hilt", version = "unspecified" }
 taskr-kotlin-jvm = { id = "dev.spozap.kotlin.jvm", version = "unspecified" }
