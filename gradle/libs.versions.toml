@@ -16,6 +16,7 @@ kotlinSerialization = "1.9.0"
 ksp = "2.1.0-1.0.29"
 hilt = "2.54"
 hiltNavigationCompose = "1.2.0"
+jetbrainsKotlinJvm = "1.9.24"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,7 +46,7 @@ hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref
 
 #Dependencies for build-logic
 
-android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp"}
+android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 compose-gradle-plugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
 ksp-gradle-plugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
@@ -66,3 +67,5 @@ taskr-android-library = { id = "dev.spozap.library", version = "unspecified" }
 taskr-android-library-compose = { id = "dev.spozap.library.compose", version = "unspecified" }
 taskr-feature = { id = "dev.spozap.feature", version = "unspecified" }
 taskr-hilt = { id = "dev.spozap.hilt", version = "unspecified" }
+taskr-kotlin-jvm = { id = "dev.spozap.kotlin.jvm", version = "unspecified" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }

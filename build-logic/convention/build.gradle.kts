@@ -35,11 +35,13 @@ gradlePlugin {
     plugins {
         register("androidApplication") {
             id = "dev.spozap.application"
-            implementationClass = "dev.spozap.build_logic.convention.AndroidApplicationConventionPlugin"
+            implementationClass =
+                "dev.spozap.build_logic.convention.AndroidApplicationConventionPlugin"
         }
         register("androidApplicationCompose") {
             id = "dev.spozap.application.compose"
-            implementationClass = "dev.spozap.build_logic.convention.AndroidApplicationComposeConventionPlugin"
+            implementationClass =
+                "dev.spozap.build_logic.convention.AndroidApplicationComposeConventionPlugin"
         }
         register("androidLibrary") {
             id = "dev.spozap.library"
@@ -47,7 +49,8 @@ gradlePlugin {
         }
         register("androidLibraryCompose") {
             id = "dev.spozap.library.compose"
-            implementationClass = "dev.spozap.build_logic.convention.AndroidLibraryComposeConventionPlugin"
+            implementationClass =
+                "dev.spozap.build_logic.convention.AndroidLibraryComposeConventionPlugin"
         }
         register("androidFeature") {
             id = "dev.spozap.feature"
@@ -56,6 +59,10 @@ gradlePlugin {
         register("hilt") {
             id = "dev.spozap.hilt"
             implementationClass = "dev.spozap.build_logic.convention.HiltConventionPlugin"
+        }
+        register("kotlinJvm") {
+            id = "dev.spozap.kotlin.jvm"
+            implementationClass = "dev.spozap.build_logic.convention.JvmLibraryConventionPlugin"
         }
     }
 }
