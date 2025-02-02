@@ -39,6 +39,8 @@ android {
 dependencies {
 
     implementation(projects.core.designSystem)
+    implementation(projects.core.data)
+
     implementation(projects.feature.home)
     implementation(projects.feature.addTask)
 

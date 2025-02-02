@@ -8,5 +8,5 @@ android {
 }
 
 dependencies {
-    implementation(projects.core.database)
+    api(projects.core.database)
 }

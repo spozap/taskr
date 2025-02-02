@@ -3,6 +3,7 @@ package dev.spozap.taskr.feature.add_task
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -32,5 +33,8 @@ private fun AddTaskScreen(state: AddTaskState, onAddTaskEvent: (AddTaskEvent) ->
             modifier = Modifier
                 .fillMaxWidth()
         )
+        Button(onClick = { onAddTaskEvent(AddTaskEvent.Submit) }) {
+            Text("Añadir")
+        }
     }
 }

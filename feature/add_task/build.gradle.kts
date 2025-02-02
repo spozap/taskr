@@ -6,3 +6,7 @@ plugins {
 android {
     namespace = "dev.spozap.taskr.feature.add_task"
 }
+
+dependencies {
+    implementation(projects.core.data)
+}
